@@ -10,7 +10,7 @@ const UserModel = require('./models/User.js');
 const ContractModel = require('./models/Contract.js')
 
 //CONN DB POSTGRESQL
-const database = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB}`, {
+const database = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB}?sslmode=require`, {
     logging : false,
     native:false
 });
